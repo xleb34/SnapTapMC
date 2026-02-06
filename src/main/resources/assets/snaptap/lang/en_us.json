@@ -1,4 +1,5 @@
 {
+  "key.category.snaptap.main": "SnapTap",
   "text.snaptap.toggle": "Toggle SnapTap",
   "text.snaptap.toggled": "Snap tap is %s",
   "text.snaptap.enabled": "ON"
