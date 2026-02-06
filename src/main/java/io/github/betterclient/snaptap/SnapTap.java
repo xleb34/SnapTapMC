@@ -8,6 +8,7 @@ import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,6 +27,8 @@ public class SnapTap implements ModInitializer {
 
     public File toggleFile = new File(FabricLoader.getInstance().getConfigDir().toFile(), "snaptap_toggle.txt");
 
+    private static final KeyBinding.Category SNAPTAP_CATEGORY = KeyBinding.Category.create(Identifier.of("snaptap", "main"));
+
     @Override
     public void onInitialize() {
         LEFT_STRAFE_LAST_PRESS_TIME = 0;
@@ -40,7 +43,7 @@ public class SnapTap implements ModInitializer {
             throw new RuntimeException(e);
         }
 
-        TOGGLE_BIND = new KeyBinding("text.snaptap.toggle", b1, "key.categories.misc") {
+        TOGGLE_BIND = new KeyBinding("text.snaptap.toggle", InputUtil.Type.KEYSYM, b1, SNAPTAP_CATEGORY) {
             @Override
             public void setPressed(boolean pressed) {
                 if(pressed) {

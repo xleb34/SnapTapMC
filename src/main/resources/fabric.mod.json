@@ -5,7 +5,8 @@
 	"name": "Snap Tap",
 	"description": "The last-pressed strafe key is activated instead of not strafing. AKA The controversial feature from Razer/Wooting keyboards for minecraft",
 	"authors": [
-		"betterclient"
+		"betterclient",
+		"xleb34"
 	],
 	"contact": {
 		"sources": "https://github.com/betterclient/snaptapmc"
@@ -20,8 +21,8 @@
 		"snaptap.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.14",
-		"minecraft": ">=1.15",
-		"java": ">=8"
+		"fabricloader": ">=0.16.0",
+		"minecraft": ">=1.21.9",
+		"java": ">=21"
 	}
 }
